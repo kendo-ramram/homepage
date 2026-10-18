@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 탭 제목, 설명, 섹션 제목은 assets/js/site-config.js 에서 고치세요 -->
+  <title>가족사랑 한의원</title>
+  <meta name="description" content="">
+  <link rel="icon" href="about/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Serif+KR:wght@600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div data-site-header></div>
+
+  <main id="main">
+    <!-- ===================== 홈 ===================== -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1 class="hero-title" data-page-heading></h1>
+          <p class="hero-lead" data-page-lead></p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#treatment">진료 안내 보기</a>
+            <a class="btn btn-ghost" href="#location">오시는 길</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="about/familylove.jpg" alt="밝은 소파와 접수대가 있는 가족사랑 한의원 대기실" width="856" height="482">
+          <div class="hero-card">
+            <p data-today></p>
+            <p>전화 문의 <a data-tel href="#"><span data-phone></span></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="approach-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="approach-title">증상과 체질을 함께 살핍니다</h2>
+          <p>같은 불편함이라도 사람마다 몸의 바탕은 다릅니다. 지금 겪고 계신 증상과 타고난 체질적 특성을 함께 살펴, 현재의 건강 상태와 앞으로의 건강 관리까지 고려한 진료 방향을 고민합니다.</p>
+        </div>
+        <div class="approach">
+          <div class="approach-item">
+            <h3>현재의 증상</h3>
+            <p>언제부터, 어떤 상황에서 불편한지 충분히 듣고 지금의 상태를 꼼꼼히 확인합니다.</p>
+          </div>
+          <div class="approach-join" aria-hidden="true">+</div>
+          <div class="approach-item">
+            <h3>체질적 특성</h3>
+            <p>8체질의학의 관점에서 몸의 타고난 강약을 살펴, 증상을 체질과 함께 이해합니다.</p>
+          </div>
+          <div class="approach-join" aria-hidden="true">=</div>
+          <div class="approach-item approach-result">
+            <h3>한 분 한 분에게 맞는 진료 방향</h3>
+            <p>두 가지를 함께 고려해 진료 방향을 정하고, 일상에서 지킬 수 있는 관리 방법까지 설명해 드립니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 8체질의학 안내 ===================== -->
+    <div class="group" id="constitution">
+      <header class="group-head">
+        <div class="wrap group-head-inner">
+          <h2 data-section-heading="constitution"></h2>
+          <p data-section-lead="constitution"></p>
+        </div>
+      </header>
+
+      <!-- 한약장 모양 체질 안내: 내용은 assets/js/constitutions.js 에서 고치세요 -->
+      <section class="section cabinet-section" id="types" aria-labelledby="cabinet-title">
+        <div class="wrap">
+          <div class="cabinet-head">
+            <h3 id="cabinet-title" data-section-text="constitution.cabinetHeading"></h3>
+            <p data-section-text="constitution.cabinetLead"></p>
+          </div>
+          <div class="cabinet-layout">
+            <div class="cabinet">
+              <div class="cabinet-cols" aria-hidden="true"><span>양 陽</span><span>음 陰</span></div>
+              <div class="cabinet-drawers" role="tablist" aria-label="체질 선택" data-cabinet></div>
+            </div>
+            <article class="type-card" id="type-card" role="tabpanel" tabindex="0" data-type-card></article>
+          </div>
+          <p class="cabinet-note">체질별 설명과 음식은 8체질의학의 일반적인 안내입니다. 내 체질은 진료를 통해 확인하시길 권합니다.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="check-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h3 id="check-title">체질 확인은 이렇게 진행됩니다</h3>
+          </div>
+          <ol class="steps steps-three">
+            <li><h4>상담과 진찰</h4><p>현재의 증상과 생활 습관을 듣고 한의사가 진찰합니다. <mark class="tbd">확인 필요</mark> 원내 체질 진찰 방법</p></li>
+            <li><h4>체질 확인</h4><p>경우에 따라 여러 번의 진료를 거쳐 체질을 확인합니다.</p></li>
+            <li><h4>체질에 맞춘 안내</h4><p>확인된 체질과 현재 상태에 맞춰 진료 방향과 음식, 생활 관리를 안내합니다.</p></li>
+          </ol>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== 진료 안내 ===================== -->
+    <div class="group" id="treatment">
+      <header class="group-head">
+        <div class="wrap group-head-inner">
+          <h2 data-section-heading="treatment"></h2>
+          <p data-section-lead="treatment"></p>
+        </div>
+      </header>
+
+      <section class="section" aria-labelledby="process-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h3 id="process-title">진료 과정</h3>
+            <p>현재의 증상과 체질적 특성을 함께 살펴 진료 방향을 정합니다. 단계마다 무엇을 하는지 설명해 드립니다.</p>
+          </div>
+          <ol class="steps steps-wide">
+            <li><h4>상담</h4><p>불편한 증상이 언제부터, 어떤 상황에서 나타나는지와 생활 습관, 이전 치료 경험을 충분히 듣습니다.</p></li>
+            <li><h4>상태 확인</h4><p>진찰을 통해 현재 몸의 상태와 체질적 특성을 함께 살핍니다.</p></li>
+            <li><h4>진료 방향 설명</h4><p>살펴본 내용을 바탕으로 앞으로의 진료 방향을 알기 쉽게 설명해 드립니다.</p></li>
+            <li><h4>이후 관리 안내</h4><p>체질에 맞는 음식과 생활 관리 방법을 안내하고, 다음 진료에서 변화를 함께 확인합니다.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section-honey" aria-labelledby="prepare-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h3 id="prepare-title">처음 오실 때 알아 두시면 좋아요</h3>
+          </div>
+          <ul class="values">
+            <li><h4>드시는 약 알려 주기</h4><p>복용 중인 약이나 건강기능식품이 있다면 이름을 메모해 오시면 상담에 도움이 됩니다.</p></li>
+            <li><h4>증상 기록하기</h4><p>불편한 증상이 언제 시작되었고 언제 심해지는지 적어 오시면 더 정확하게 살펴볼 수 있습니다.</p></li>
+            <li><h4>신분증 지참</h4><p>진료 접수 시 본인 확인을 위해 신분증을 지참해 주세요. <mark class="tbd">확인 필요</mark></p></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h3 id="faq-title">자주 묻는 질문</h3>
+          </div>
+          <div class="faq" data-faq></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== 한의원 소개 ===================== -->
+    <div class="group" id="about">
+      <header class="group-head">
+        <div class="wrap group-head-inner">
+          <h2 data-section-heading="about"></h2>
+          <p data-section-lead="about"></p>
+        </div>
+      </header>
+
+      <section class="section" aria-labelledby="doctor-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h3 id="doctor-title">의료진</h3>
+            <p>확인된 이력만 게시합니다.</p>
+          </div>
+          <div class="doctor" data-doctor></div>
+        </div>
+      </section>
+
+      <section class="section section-honey" aria-labelledby="space-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h3 id="space-title">원내 공간</h3>
+            <p>가족이 함께 기다려도 편안하도록 밝고 넉넉한 대기 공간을 마련했습니다.</p>
+          </div>
+          <div class="space-grid">
+            <figure class="space-main">
+              <img src="about/familylove.jpg" alt="밝은 색 소파와 접수대가 있는 대기실" width="856" height="482" loading="lazy">
+              <figcaption class="figure-cap">대기실과 접수대</figcaption>
+            </figure>
+            <figure class="space-side">
+              <!-- 진료실 사진이 준비되면 아래 div를 <img src="about/파일이름.jpg" alt="진료실"> 로 바꿔 주세요 -->
+              <div class="space-slot" role="img" aria-label="진료실 사진 준비 중"><span>진료실 사진</span><mark class="tbd">확인 필요</mark></div>
+              <figcaption class="figure-cap">진료실</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="herbs-title">
+        <div class="wrap herb-grid">
+          <figure class="herb-photo">
+            <img src="about/2.jpg" alt="청정한약재 공급 시스템, 옴니허브 클린 체인 한의원 현판" width="200" height="200" loading="lazy">
+            <figcaption class="figure-cap">원내에 게시된 현판</figcaption>
+          </figure>
+          <div>
+            <div class="section-head">
+              <h3 id="herbs-title">한약재 정보</h3>
+              <p>가족사랑 한의원은 식품의약품안전처의 인증을 획득하고 관리, 감독을 받고 있는 제약회사 중 <strong class="herb-maker">옴니허브</strong>와 <strong class="herb-maker">대효제약(참초원)</strong>의 안전한 한약재를 사용하고 있습니다.</p>
+            </div>
+            <ul class="check-list is-checked">
+              <li>깨끗하고 품질 좋은 한약재를 사용합니다.</li>
+              <li>한약의 약효 성분을 그대로 유지합니다.</li>
+              <li>중금속 검사를 통과한 깨끗한 한약재입니다.</li>
+              <li>잔류농약 검사를 통과한 깨끗한 한약재입니다.</li>
+              <li>이산화황 검사를 통과한 깨끗한 한약재입니다.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== 오시는 길 ===================== -->
+    <div class="group" id="location">
+      <header class="group-head">
+        <div class="wrap group-head-inner">
+          <h2 data-section-heading="location"></h2>
+          <p data-section-lead="location"></p>
+        </div>
+      </header>
+
+      <section class="section" aria-label="위치와 진료 시간">
+        <div class="wrap location-grid">
+          <div class="location-map">
+            <iframe class="map-frame" data-map="embed" title="가족사랑 한의원 위치 지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="btn-row">
+              <a class="btn btn-ghost" data-map="naver" href="#" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+              <a class="btn btn-ghost" data-map="kakao" href="#" target="_blank" rel="noopener">카카오맵에서 보기</a>
+            </div>
+          </div>
+          <div class="location-info">
+            <div class="info-card info-card-pine">
+              <div class="info-block">
+                <span class="info-label">전화 예약 및 문의</span>
+                <a class="info-phone" data-tel href="#"><span data-phone></span></a>
+                <p data-reservation></p>
+              </div>
+              <div class="info-block">
+                <span class="info-label">주소</span>
+                <p data-address></p>
+              </div>
+              <div class="btn-row">
+                <a class="btn btn-primary" data-tel href="#">전화 걸기</a>
+              </div>
+            </div>
+            <div class="info-card">
+              <h3>진료 시간</h3>
+              <div data-hours></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/constitutions.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -159,13 +159,19 @@
     el.innerHTML = `
       <div class="doctor-photo">
         ${d.photo
-          ? `<img src="${esc(d.photo)}" alt="${esc(d.name)} ${esc(d.role)}" loading="lazy">`
+          ? `<img src="${esc(d.photo)}" alt="${esc(d.photoAlt || d.name + " " + d.role)}" width="2100" height="2664" loading="lazy">`
           : `<div class="photo-slot" role="img" aria-label="원장 사진 준비 중"><span>원장 사진</span><mark class="tbd">확인 필요</mark></div>`}
       </div>
       <div class="doctor-body">
         <h4 class="doctor-name">${esc(d.name)} <span>${esc(d.role)}</span></h4>
         <p class="doctor-role">${esc(d.specialty)}</p>
-        <ul class="doctor-career">${d.career.map(c => `<li>${rich(c)}</li>`).join("")}</ul>
+        <div class="doctor-career-groups">
+          ${d.career.map(g => `
+          <section class="doctor-career-group">
+            <h5>${esc(g.title)}</h5>
+            <ul class="doctor-career">${g.items.map(c => `<li>${rich(c)}</li>`).join("")}</ul>
+          </section>`).join("")}
+        </div>
       </div>`;
   });
 

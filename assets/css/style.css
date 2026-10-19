@@ -356,7 +356,10 @@ mark.tbd {
 .doctor-name { font-family: var(--serif); font-size: var(--t-xl); }
 .doctor-name span { font-family: var(--sans); font-size: var(--t-base); font-weight: 500; color: var(--ink-soft); margin-left: 6px; }
 .doctor-role { color: var(--pine); font-weight: 600; margin: 4px 0 20px; }
-.doctor-career { list-style: none; display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 20px; }
+.doctor-career-groups { display: grid; gap: 24px; border-top: 1px solid var(--line); padding-top: 22px; }
+@media (min-width: 1100px) { .doctor-career-groups { grid-template-columns: 1.35fr 1fr; gap: 40px; } }
+.doctor-career-group h5 { font-size: var(--t-sm); color: var(--pine); margin-bottom: 10px; }
+.doctor-career { list-style: none; display: grid; gap: 8px; font-size: var(--t-sm); line-height: 1.6; }
 .doctor-career li { padding-left: 16px; position: relative; }
 .doctor-career li::before { content: ""; position: absolute; left: 0; top: 0.75em; width: 6px; height: 6px; border-radius: 50%; background: var(--sun); }
 
@@ -526,24 +529,37 @@ mark.tbd {
 .food-box.bad h5::before { border: 1.5px solid var(--wood); }
 .cabinet-note { margin-top: 20px; font-size: var(--t-xs); color: var(--ink-soft); }
 
+/* 8체질 치료 시 안내사항 */
+.notice-grid { display: grid; gap: 32px; }
+@media (min-width: 960px) { .notice-grid { grid-template-columns: 0.7fr 1.3fr; gap: 64px; align-items: start; } }
+.notice-photo { margin: 0; }
+.notice-photo img { width: 100%; max-width: 360px; aspect-ratio: 1; object-fit: cover; border-radius: var(--r-card); }
+@media (min-width: 960px) { .notice-photo { position: sticky; top: calc(var(--header-h) + 32px); } }
+.notice-list { list-style: none; display: grid; gap: 14px; }
+.notice-list li {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--pine);
+  border-radius: 16px;
+  padding: 24px 26px;
+}
+.notice-list h4 { font-family: var(--serif); font-size: var(--t-md); margin-bottom: 10px; }
+.notice-list p { color: var(--ink-soft); }
+.notice-example {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--honey-light);
+  font-size: var(--t-sm);
+  color: var(--ink);
+}
+
 @media (max-width: 479px) {
   .cabinet { padding: 0 8px 8px; }
   .drawer { min-height: 100px; }
 }
 
 /* ---------- 한의원 소개 ---------- */
-.space-grid { display: grid; gap: 20px; }
-@media (min-width: 960px) { .space-grid { grid-template-columns: 2fr 1fr; align-items: end; } }
-.space-grid figure { margin: 0; }
-.space-grid img { width: 100%; border-radius: var(--r-card); object-fit: cover; }
-.space-main img { aspect-ratio: 16 / 9; }
-.space-side img { aspect-ratio: 1; }
-.space-slot {
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
-  aspect-ratio: 1; border-radius: var(--r-card);
-  background: repeating-linear-gradient(-45deg, var(--honey-light) 0 12px, var(--honey) 12px 24px);
-  color: var(--ink-soft); font-size: var(--t-sm);
-}
 
 .values { list-style: none; display: grid; gap: 16px; }
 @media (min-width: 720px) { .values { grid-template-columns: repeat(3, 1fr); } }

@@ -136,7 +136,7 @@
             const isToday = h.dows.includes(today);
             return `
           <tr class="${h.closed ? "is-closed" : ""}${isToday ? " is-today" : ""}">
-            <th scope="row">${esc(h.day)}${isToday ? ' <span class="today-tag">오늘</span>' : ""}</th>
+            <th scope="row">${esc(h.day)}${isToday ? ' <!--span class="today-tag">오늘</span-->' : ""}</th>
             <td>${rich(h.time)}</td>
           </tr>`;
           }).join("")}
